@@ -1,7 +1,6 @@
 //
 // Created by root on 3/21/17.
 //
-#include "message_queue.h"
 #include <stdint.h>
 #include <pthread.h>
 #include <sys/time.h>
