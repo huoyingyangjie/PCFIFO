@@ -81,7 +81,7 @@ public:
     T *  producer_get_event_try()
     {
          T * t;
-         c2p_fifo.fifo_get((uint8_t*)&t,sizeof(t))?t:NULL;
+        return  c2p_fifo.fifo_get((uint8_t*)&t,sizeof(t))?t:NULL;
 
     }
     T *  producer_get_event_wait()
@@ -111,7 +111,7 @@ public:
     T * consumer_get_event_try()
     {
         T * t;
-        p2c_fifo.fifo_get((uint8_t*)&t,sizeof(t))?t:NULL;
+        return p2c_fifo.fifo_get((uint8_t*)&t,sizeof(t))?t:NULL;
     }
     T * consumer_get_event_wait()
     {
